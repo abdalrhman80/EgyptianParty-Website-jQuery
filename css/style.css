@@ -1,0 +1,190 @@
+:root {
+    --main-Color: rgba(214, 46, 51, 0.7);
+    --main-Color-opacity: rgba(246, 100, 105, 0.7);
+    --form-control-box-shadow: rgba(233, 49, 55, 0.5);
+    --transition-duration: .4s;
+    --gray-color: #777777;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.form-control:focus {
+    border-color: var(--main-Color-opacity);
+    box-shadow: 0 0 0 0.14rem var(--form-control-box-shadow);
+}
+
+/* Start header and Navbar */
+header {
+    height: 95vh;
+    background-image: linear-gradient(to right, var(--main-Color), var(--main-Color-opacity)),
+        url("../imgs/excited-audience-watching-confetti-fireworks-having-fun-music-festival-night-copy-space.jpg");
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+.header-tagLine {
+    transition: margin-left var(--transition-duration);
+}
+
+.navbar-toggle {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left var(--transition-duration);
+}
+
+.navbar-left {
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: -250px;
+    transform: translate(0, -50%);
+    transition: left var(--transition-duration);
+}
+
+.navbar-content {
+    background-color: #111111;
+    width: 250px;
+    height: 100vh;
+    padding: 30px;
+}
+
+.navbar-content a {
+    display: block;
+}
+
+.navbar-icon,
+.navbar-content a {
+    color: white;
+    cursor: pointer;
+    transition: color var(--transition-duration);
+    font-size: 24px;
+}
+
+.navbar-icon:hover,
+.navbar-content a:hover {
+    color: var(--main-Color);
+}
+
+@media screen and (max-width:576px) {
+    header h1 {
+        font-size: 50px;
+    }
+
+    .navbar-content {
+        width: 200px;
+        left: 200px;
+        padding: 30px 20px;
+    }
+
+    .navbar-toggle {
+        bottom: 30%;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .navbar-toggle {
+        bottom: 20%;
+    }
+
+    .navbar-icon,
+    .navbar-content a {
+        font-size: 18px;
+    }
+}
+
+/* End header and Navbar */
+
+/* Start Details Section */
+#Details {
+    padding: 100px;
+}
+
+.singer-section {
+    width: 65%;
+}
+
+.singer-item p:nth-of-type(1) {
+    cursor: pointer;
+}
+
+.singer-item p:first-child {
+    background-color: var(--main-Color);
+}
+
+.singer-desc {
+    background-color: #cccccccc;
+    color: black;
+    font-weight: 400;
+    padding: 15px;
+}
+
+@media screen and (max-width:992px) {
+    #Details {
+        padding: 50px 0;
+    }
+
+    .singer-section {
+        width: 100%;
+    }
+}
+
+/* End Details Section */
+
+/* Start Duration Section */
+#Duration {
+    background-image: linear-gradient(to right, var(--main-Color), var(--main-Color-opacity)),
+        url("../imgs/invitation-2508607__340.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#Duration .continent {
+    border: 2px solid white;
+    padding: 40px;
+}
+
+@media screen and (max-width:992px) {
+    .continent {
+        padding: 10px;
+    }
+}
+
+/* End Duration Section */
+
+/* Start Footer Section */
+.contactHeader p,
+.contact-info:not(.socialLinks),
+.FormGroup label,
+.characterRemaining {
+    color: var(--gray-color);
+}
+
+.contact-info h3 {
+    color: #212529;
+}
+
+.contact-info h3+p {
+    text-indent: 10px;
+}
+
+.contact-info ul li:nth-of-type(2) a {
+    color: rgba(214, 46, 51);
+}
+
+/* End Footer Section */
