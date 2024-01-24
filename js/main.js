@@ -1,3 +1,14 @@
+// Load Screen
+$(function () {
+  setTimeout(() => {
+    $(".loader").fadeOut(600, () => {
+      $(".loaderLayer").slideUp(600, () => {
+        $("body").css("overflow", "auto");
+      });
+    });
+  }, 600);
+});
+
 // Navbar Section
 $("a[href^='#']").on("click", function () {
   let href = $(this).attr("href");
